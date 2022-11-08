@@ -1,4 +1,3 @@
-import react from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Control from "../Pages/Control";
 import Display from "../Pages/Display";
