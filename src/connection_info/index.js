@@ -1,12 +1,13 @@
-import Twit from "twit";
+//import { TwitterClient } from "twitter-api-client";
+//import { TwitterApi } from "twitter-api-v2";
 
-const twt = new Twit({
-  consumer_key: "1hYH5ZKmYyhtEwbgvmNdsuvUV",
-  consumer_secret: "1DCMfAx9JwbEPX14GvcwIzTKMLzIUGmBZNc4omR08AjbqfvCZm",
-  access_token: "1589706742379814912-ywpjcJQjRyLQOOFow0XOfWcU0pJvze",
-  access_token_secret: "LDQSgAk8ZEhwRqbW8a8xNKpCyWIIm4i7jalOTSBRLytCG",
-  timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
-  strictSSL: true, // optional - requires SSL certificates to be valid.
-});
+const client = {
+  apiKey: "Zz860mI84HgIi1glHOJYnr8IZ",
+  apiSecret: "vpywxCj7NUWhYfz1JE3p4SjLhicc9ogqIeph8pusGG9LQ9Rcg2",
+  accessToken: "1589706742379814912-CVfxomPfgrstowtbHoItxr7a2j8243",
+  accessTokenSecret: "Y7ntdcqdflxRKbOjRydAFdiS0sW6PuNY39WzgKPHb6nw7",
+  bearerToken:
+    "AAAAAAAAAAAAAAAAAAAAAKk0jAEAAAAAJOE3a5PzPQ9wVvHcJ%2FA8oISQI58%3DqEjfVF08oTj9B9GD2gSaXUiKvQvvRnQ6rf9RbFLPvF63qhK1rb",
+};
 
-export default twt;
+export default client;

@@ -1,39 +1,24 @@
-import twt from "../connection_info";
 import axios from "axios";
 
-const url = "http://localhost:5000/";
+const url = "http://localhost:5000";
 
-//gets tweets from a hashtag
-const twitGetter = async (hashtag) => {
-  return twt.get(
-    "search/tweets",
-    {
-      q: `#${hashtag}`,
-      count: 100,
-    },
-    (err, data, response) => {
-      return data;
-    }
-  );
-};
-
-// recieves a tweet stream based on a hashtag;
-
-const getStream = (hashtag) => {
-  const stream = twt.stream("status/filter", { track: "" });
-  return stream.on("tweet", (tweet) => {
-    return tweet;
-  });
-};
-
-const getDefaulHeaders = () => {
+export const getDefaulHeaders = () => {
   return {
-    "content-type": "application/json",
+    "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
   };
 };
 
-const getCuratedTweets = async () => {
+export const twitGetter = async (hashtag) => {
+  console.log(hashtag);
+  return axios({
+    method: "get",
+    url: `${url}/search?q=${hashtag}`,
+    headers: getDefaulHeaders(),
+  });
+};
+
+export const getCuratedTweets = async () => {
   return axios({
     method: "get",
     url: `${url}/getCuratedTweets`,
@@ -41,7 +26,7 @@ const getCuratedTweets = async () => {
   });
 };
 
-const resetTweets = async () => {
+export const resetTweets = async () => {
   return axios({
     method: "delete",
     url: `${url}/resetTweets`,
@@ -49,29 +34,29 @@ const resetTweets = async () => {
   });
 };
 
-const addTweet = async (data) => {
+export const addTweet = async (data) => {
   return axios({
-    method: "post",
+    method: "POST",
     url: `${url}/addTweet`,
     data,
     headers: getDefaulHeaders(),
   });
 };
 
-const removeTweet = async (data) => {
+export const removeTweet = async (data) => {
   return axios({
-    method: "post",
+    method: "POST",
     url: `${url}/removeTweet`,
     data,
     headers: getDefaulHeaders(),
   });
 };
 
-module.exports = {
-  getStream,
-  twitGetter,
-  getCuratedTweets,
-  resetTweets,
-  addTweet,
-  removeTweet,
-};
+// module.exports = {
+//   getStream,
+//   twitGetter,
+//   getCuratedTweets,
+//   resetTweets,
+//   addTweet,
+//   removeTweet,
+// };

@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# instalando o APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para rodar o app após baixar é necessário instalar suas dependências.
 
-## Available Scripts
+É necessário ter node e NPN instalados em sua máquina.
 
-In the project directory, you can run:
+Em um prompt na pasta raiz após ter instalado node e NPM, rode o comando $ npm install e aguarde alguns minutos para a instalação das dependências app.
 
-### `npm start`
+Após instaladas, crie um arquivo .env na pasta raiz com as informações de autenticação do Twitter que podem ser conseguidas em [https://developer.twitter.com/] e armazenadas conforme o arquivo .env.example na pasta raiz do projeto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Rodando o app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+com prompt de comando na pasta raiz rode:
 
-### `npm test`
+### `npm run startall`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Isso inicializará um servidor Node backend que se comunicará com a api do twitter, e outro que disponibilizará a página em React no front.
 
-### `npm run build`
+O front abriá sozinho no seu navegador, mas de qualquer forma pode acessá-lo em [http://localhost:3000/]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O app pode levar até 2 minutos para iniciar os seus scripts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## HOME
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O app abrirá na página "/", Home, onde haverão dois links, um para a página de controle, e um para a página de Dispplay
 
-### `npm run eject`
+## Controle
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+na página controle [http://localhost:3000/control] o usuário poderá pesquisar por hashtag os últimos 10 twites e clicando na flecha azul(send) os enviar para a lista de aprovado que se atualiza sozinha a caa 3 segundos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A lista de Aprovado permite retirar twites clicando na lixeira do lado de cada tuite, ou apagar todos clicando no botão "apagar todos" que ficam acima da lista.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Display
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+a página Display [http://localhost:3000/display] serve de telão para apresentação de tuites, ele mostra a lista de aprovado do lado esquerdo, e ao clicar na seta(send) amplica o tuite selecionado para facilitar a visualização.
 
-## Learn More
+## Criado Por Daniel Modesto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Fique a vontade para modificar este projeto, e caso o use por favor não esqueça de fornecer créditos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+meus links são:
+[https://daniel-modesto.vercel.app/]
+[https://www.linkedin.com/in/daniel-modesto-66628aa0/]
