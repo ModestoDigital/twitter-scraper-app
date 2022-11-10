@@ -4,7 +4,11 @@ Para rodar o app após baixar é necessário instalar suas dependências.
 
 É necessário ter node e NPN instalados em sua máquina.
 
-Em um prompt na pasta raiz após ter instalado node e NPM, rode o comando $ npm install e aguarde alguns minutos para a instalação das dependências app.
+Em um prompt na pasta raiz após ter instalado node e NPM, rode o comando:
+
+### `$npm install` 
+
+E aguarde alguns minutos para a instalação das dependências app.
 
 Após instaladas, crie um arquivo .env na pasta raiz com as informações de autenticação do Twitter que podem ser conseguidas em [https://developer.twitter.com/] e armazenadas conforme o arquivo .env.example na pasta raiz do projeto.
 
